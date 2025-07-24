@@ -33,6 +33,5 @@ public class UFO : MonoBehaviour
         var distance = Vector3.Distance(transform.position, targetPosition);
         
         transform.position = Vector3.Lerp(transform.position, targetPosition, _moveSpeed / distance);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetPosition), Time.deltaTime);
     }
 }
